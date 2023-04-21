@@ -4,6 +4,7 @@ import BookingForm from "@components/BookingForm/BookingForm";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 
+
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Booking-form" element={<BookingForm />} />
       </Routes>
+      
     </>
   );
 }

@@ -25,6 +25,7 @@ $color-dark: #221e40;
 nav {
   background-image: url("./images/espace.jpg");
   background-position: 40%;
+  
   height: 300px;
   width: 100%;
 }
@@ -86,15 +87,17 @@ a:hover {
 }
 
 .navtitle2 {
+  font-family: 'Inria Sans';
   font-style: italic;
   font-weight: 700;
-  font-size: 75px;
-  line-height: 33px;
+  font-size: 51px;
+  line-height: 54px;
+  /* or 76% */
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 10px;
-  color: #ffffff;
+  letter-spacing: 0.33em;
+  color: #FFFFFF;
 }
 
 .navtexte {
