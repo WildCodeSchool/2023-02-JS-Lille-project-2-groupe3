@@ -18,12 +18,12 @@ function Cards() {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:5000/fly").then((data) => setData(data.data));
+    axios.get("http://localhost:5001/fly").then((data) => setData(data.data));
   }, []);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/articles")
+      .get("http://localhost:5001/articles")
       .then((res) => setListArticle(res.data));
   }, []);
 
