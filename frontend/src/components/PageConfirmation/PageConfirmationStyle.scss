@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+
+/* ----  $tyle ---- */
+
+$font-title: "Saira Condensed", sans-serif;
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+
+/* ----  general ---- */
+:root {
+  background-color: $color-background;
+  width: 100%;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+/* ----  navbar ---- */
+.nav {
+  background-image: url("./img/étoile\ \(1\).jpg");
+  background-position: 20%;
+  height: 180px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+/* ----  title thank for purchase ---- */
+
+.purchase-title {
+  color: $color-light;
+  text-align: center;
+  font-size: 80px;
+  font-family: $font-title;
+  letter-spacing: 5px;
+}
+
+/* ----  ticket purchase ---- */
+
+.bloc-ticket {
+  display: flex;
+  // justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  color: $color-light;
+  background-color: $color-Bck-div;
+  box-shadow: $color-shadows-dark 0px 7px 8px 0px;
+  margin-left: 300px;
+  margin-right: 300px;
+  border: 1px solid rgb(208, 151, 252);
+  overflow: hidden;
+}
+
+/* ----  ticket central description ---- */
+
+.flight-ticket,
+.destination-purchase-ticket,
+.date-purchase-ticket,
+.purchase-counter {
+  text-align: center;
+  font-family: $font-content;
+}
+.flight-ticket {
+  color: $color-Bck-btn;
+  font-size: 45px;
+}
+
+.ticket-text {
+  // border: 4px solid yellow;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.date-destination-text {
+  // border: 7px solid rgb(192, 65, 86);
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  font-size: 22px;
+}
+/* ----  ticket left logo & qr code ---- */
+
+.qr-code-ticket {
+  padding: 5%;
+}
+
+.qr-code {
+  border: 4px solid rgb(57, 208, 34);
+  // flex-direction: column;
+  flex-wrap: wrap;
+  background: $color-light;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* ----  ticket central counter ---- */
+
+.purchase-counter {
+  letter-spacing: 10px;
+  font-weight: lighter;
+  color: $color-light;
+  font-size: 22px;
+  background-color: #4d51aa3d;
+  box-shadow: $color-shadows-dark 0px 7px 8px 0px;
+  // box-shadow: #101010 0px 4px 8px 6px;
+}
+
+/* ----  ticket right seats plan ---- */
+.seats-plan-ticket {
+  border: 8px solid rgb(222, 12, 166);
+  font-family: $font-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-end;
+}
+
+.seats-description {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 22px;
+}
