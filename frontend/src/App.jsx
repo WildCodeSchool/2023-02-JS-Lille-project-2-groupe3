@@ -11,7 +11,6 @@ import NavBarMobile from "./components/NavBar/NavBarMobile/NavBarMobile";
 import ConfirmationPage from "./pages/ConfirmationPage";
 import "./App.css";
 
-
 function App() {
   const [message, setMessage] = useState("");
   function getCurrentDimension() {

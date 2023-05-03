@@ -251,5 +251,5 @@ export default function BookingForm({ setMessage }) {
 }
 
 BookingForm.propTypes = {
-  setMessage: PropTypes.func({}).isRequired,
+  setMessage: PropTypes.object.isRequired,
 };
