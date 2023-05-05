@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+
+$font-title: "Saira Condensed", sans-serif;
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+.card-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #d7d7d7;
+  width: 92%;
+  height: 330px;
+  margin: 36px auto;
+  background-color: #1e1e1e;
+  box-shadow: 4px 7px 11px #101010;
+  border-radius: 10px;
+  font-family: "Inria Sans", sans-serif;
+  @include mobile-only {
+    border-radius: 10px;
+    width: 90%;
+    height: 20%;
+  }
+}
+
+.h2-card {
+  margin: 1% 0% 1% 0%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: $color-Bck-btn;
+  text-shadow: 6px 5px 5px $color-shadows-dark;
+  text-align: center;
+  padding-bottom: 0%;
+  text-transform: uppercase;
+  @include mobile-only {
+    font-size: 26px;
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  background-color: $color-Bck-div;
+  border-radius: 10px;
+  @include mobile-only {
+    border-radius: 10px;
+  }
+}
+
+.card-content img {
+  width: 40%;
+  border-radius: 10px 0px 0px 10px;
+  @include mobile-only {
+    width: 42%;
+  }
+}
+
+.infos-card {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.infos-card p {
+  padding: 0px;
+  @include mobile-only {
+    padding: 0%;
+  }
+}
+.h3-destination-card {
+  font-family: "Inria Sans", sans-serif;
+  color: $color-light;
+  font-size: 25px;
+  letter-spacing: 28px;
+  text-align: center;
+  padding-left: 7%;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  @include mobile-only {
+    font-size: 20px;
+    letter-spacing: 7px;
+  }
+}
+.text-description-card {
+  text-align: justify;
+  font-family: "Inria Sans", sans-serif;
+  color: $color-light;
+  font-size: 12px;
+  margin: 0% 5% 2% 5%;
+  word-spacing: 1px;
+  line-height: 13px;
+  @include mobile-only {
+    font-size: 10px;
+    margin: 0% 5% 4% 5%;
+    word-spacing: 0px;
+    line-height: 11px;
+    display: block;
+    width: 169px;
+    height: 43px;
+    overflow-y: scroll;
+  }
+}
+
+.date-card {
+  font-family: $font-content;
+  color: $color-Bck-btn;
+  font-weight: bold;
+  font-size: 19px;
+  text-shadow: 6px 5px 5px $color-shadows-dark;
+  margin-top: 2%;
+  @include mobile-only {
+    font-size: 14px;
+  }
+}
+.h4-price-card {
+  font-family: $font-content;
+  color: $color-light;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0% 0% 3% 70%;
+  @include mobile-only {
+    font-size: 12px;
+    margin: 1% 0% 3% 52%;
+  }
+}
+.card-button {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 0%;
+  width: 100%;
+  justify-content: center;
+}
+.button-maps-card {
+  width: 70px;
+  height: 30px;
+  background: #4d51aa;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
+  border-radius: 6px;
+  color: #d7d7d7;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1% 5% 1% 1%;
+  text-align: center;
+  border: none;
+  @include mobile-only {
+    width: 30px;
+    height: 20px;
+    font-size: 12px;
+  }
+}
+.button-go-card {
+  width: 70px;
+  height: 30px;
+  background: #4d51aa;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
+  border-radius: 6px;
+  color: #d7d7d7;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1% 5% 1% 1%;
+  text-align: center;
+  @include mobile-only {
+    width: 30px;
+    height: 20px;
+    font-size: 12px;
+  }
+}
+
+.button-go-card:hover {
+  background: darken($color-Bck-div, 1.5%);
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten($color-light, 18%);
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken($color-shadows-dark, 9.5%);
+  transition: all 250ms linear;
+}
+.button-maps-card:hover {
+  background: darken($color-Bck-div, 1.5%);
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten($color-light, 18%);
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken($color-shadows-dark, 9.5%);
+  transition: all 250ms linear;
+}

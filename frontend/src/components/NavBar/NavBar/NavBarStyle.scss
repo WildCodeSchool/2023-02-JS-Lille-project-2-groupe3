@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: $color-light;
+}
+
+#root {
+  margin: 0px;
+  position: absolute;
+  top: 0px;
+  padding: 0px;
+}
+
+nav {
+  background-image: url("../images/fond.png");
+  height: 144px;
+  width: 100%;
+  background-size: 122%;
+  background-repeat: no-repeat;
+  background-position-y: 10%;
+  @include mobile-only {
+    display: none;
+    background-image: none;
+  }
+}
+
+.navcontainer1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navtitle {
+  font-family: "Inria Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 129.2%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.11em;
+  color: $color-light;
+  margin: 0px 10px 0px 49px;
+}
+
+.navlogo {
+  width: 115px;
+  height: 115px;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px black);
+  margin: 13px 0px 0px 30px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: end !important;
+}
+
+.navbar li {
+  padding: 3% 2% 0% 6% !important;
+  list-style: none;
+  padding: 0 60px;
+  position: relative;
+  font-size: 2rem;
+  font-family: "Inria Sans";
+  color: #d7d7d7;
+}
+.navbardeskstop {
+  width: 80%;
+}
+a {
+  color: #d7d7d7;
+  text-decoration: none;
+}
+
+.navcontainer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.navtitle2 {
+  font-family: $font-content;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 15px;
+  color: $color-light;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+.navtexte {
+  font-family: $font-content;
+  font-size: 19px;
+
+  text-align: center;
+  color: $color-light;
+}

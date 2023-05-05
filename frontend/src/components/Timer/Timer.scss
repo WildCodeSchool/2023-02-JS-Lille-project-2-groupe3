@@ -1,0 +1,42 @@
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@keyframes AnimTimer {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timer {
+  animation: AnimTimer 1s ease 0s 1 normal forwards;
+  display: flex;
+  text-align: center;
+  font-family: "Inria Sans";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 9px;
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 3px 6px 6px #101010;
+  @include mobile-only {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    padding-left: 2%;
+  }
+}

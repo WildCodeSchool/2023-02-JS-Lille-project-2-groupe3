@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+
+$font-title: "Saira Condensed", sans-serif;
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+
+$breakpoints: (
+  mobile: 600px,
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+.formbook-booking {
+  width: 100%;
+  height: 100%;
+  background-color: $color-background;
+}
+.formbook {
+  width: 100%;
+  height: 120%;
+  display: flex;
+  align-items: center;
+  @include mobile-only {
+    height: 100%;
+  }
+}
+.formbook-contenair-total {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: self-start;
+  padding-top: 6%;
+  @include mobile-only {
+    flex-direction: column;
+    padding-top: 0%;
+    align-items: center;
+    height: 80%;
+    margin-right: 4%;
+    margin-left: 4%;
+    width: 90%;
+  }
+}
+.formbook-h2 {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 19px;
+  color: #d7d7d7;
+  letter-spacing: 10px;
+  padding: 10px 0px 10px 6px;
+  margin: 0%;
+}
+
+.contenair-formbook-identity {
+  display: flex;
+  flex-direction: column;
+
+  background: #141d3c;
+  box-shadow: 0px 4px 4px #101010;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  height: 300px;
+  width: 26%;
+  @include mobile-only {
+    width: 360px;
+  }
+}
+.contenair-formbook-condition {
+  display: flex;
+  flex-direction: column;
+  background: #141d3c;
+  box-shadow: 0px 4px 4px #101010;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  align-items: center;
+  width: 35%;
+  height: 235px;
+  @include mobile-only {
+    width: 360px;
+    height: 300px;
+  }
+}
+.contenair-formbook-seat {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background: #141d3c;
+  box-shadow: 0px 4px 4px #101010;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  width: 26%;
+  @include mobile-only {
+    width: 360px;
+  }
+}
+
+.formbook-input-class,
+.formbook-option-health,
+.formbook-label-style,
+.formbook-label-style-seat,
+.formbook-label-style-seat-price {
+  font-family: "Inria Sans", sans-serif;
+  color: #221e40;
+  width: 88%;
+  height: 26px;
+  background: #d7d7d7;
+  box-shadow: 0px 4px 4px #101010;
+  border-radius: 2px;
+  border: none;
+  font-size: 18px;
+  margin-top: 20px;
+
+  @include mobile-only {
+    font-family: $font-content;
+    color: $color-dark;
+    width: 89%;
+    height: 25px;
+    background: $color-light;
+    box-shadow: 0px 4px 4px $color-shadows-dark;
+    border-radius: 2px;
+    border: none;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+.formbook-option-health {
+  height: 30px;
+  @include mobile-only {
+    height: 18px;
+  }
+}
+.formbook-option-health2 {
+  font-size: 15px;
+  color: $color-Bck-div;
+
+  @include mobile-only {
+    font-size: 10px;
+  }
+}
+.formbook-label-style-seat {
+  width: 90px;
+  padding-bottom: 3px;
+  @include mobile-only {
+    width: 70px;
+  }
+}
+.formbook-label-style-seat-price {
+  width: 145px;
+  padding-bottom: 3px;
+  @include mobile-only {
+    width: 106px;
+  }
+}
+.formbook-contenair-18 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+.formbook-label-18 {
+  font-family: "Inria Sans", sans-serif;
+  color: $color-light;
+  border-radius: 2px;
+  border: none;
+  font-size: 28px;
+  @include mobile-only {
+    font-size: 20px;
+  }
+}
+.formbook-input-check {
+  font-family: "Inria Sans", sans-serif;
+  color: $color-dark;
+  background: $color-light;
+  box-shadow: 1px 1px 4px #1e1e1e;
+  border-radius: 2px;
+  border: none;
+  width: 20px;
+  margin-left: 12px;
+}
+.formbook-box-total-seat {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column-reverse;
+  @include mobile-only {
+    flex-direction: row;
+  }
+}
+.formbook-seat-img-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 44px;
+  margin: 0px;
+  width: 100%;
+  @include mobile-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 88px;
+    width: 80px;
+    margin: 10px;
+  }
+}
+
+.formbook-button-book {
+  width: 94px;
+  height: 41px;
+  color: $color-light;
+  background: $color-Bck-btn;
+  box-shadow: 2px 2px 3px $color-shadows-dark;
+  border-radius: 4px;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include mobile-only {
+    width: 90px;
+    height: 46px;
+    font-size: 24px;
+  }
+}
+
+.formbook-button-book:hover {
+  background: darken($color-Bck-div, 1.5%);
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+  color: lighten($color-light, 18%);
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken($color-shadows-dark, 9.5%);
+  transition: all 250ms linear;
+}
+.formbook-box-img-navette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 144px;
+  background-image: url(https://i.postimg.cc/3Rw6Nkmg/navette.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-position: -2px;
+  margin: 4px;
+  @include mobile-only {
+    width: 140px;
+    height: 101px;
+  }
+}
+.formbook-first-row {
+  margin-left: 2px;
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+}
+.formbook-second-row,
+.formbook-third-row {
+  margin-left: 2px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.formbook-seatA {
+  color: #9886b3;
+  font-size: 21px;
+  font-weight: bold;
+  transform: rotate(90deg);
+  transform-origin: bottom;
+  cursor: context-menu;
+  padding: 0%;
+  margin: -3px 1px -1px 1px;
+  border: none;
+  background-color: $color-Bck-div;
+}
+.formbook-seatA:hover {
+  color: #361cf8;
+  transform: translateY(-2px);
+  transform: rotate(90deg);
+  transform-origin: bottom;
+  border: none;
+}
+.formbook-seatA:active {
+  color: #1a099a;
+  transform: rotate(90deg);
+  transform-origin: bottom;
+}

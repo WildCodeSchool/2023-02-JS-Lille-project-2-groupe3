@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,700;1,300&family=Saira+Condensed:wght@100;200;500&display=swap");
+
+$font-title: "Saira Condensed", sans-serif;
+$font-content: "Inria Sans", sans-serif;
+$color-Bck-div: #141d3c;
+$color-Bck-btn: #4d51aa;
+$color-background: #1e1e1e;
+$color-shadows-dark: #101010;
+$color-light: #d7d7d7;
+$color-dark: #221e40;
+$breakpoints: (
+  mobile: 600px,
+);
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+.test2 {
+  display: flex;
+  flex-direction: row;
+  @include mobile-only {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+  }
+}
+
+.members-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 267px;
+  height: 486px;
+  margin: 2% 1% 2% 1%;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 10px;
+  gap: 10px;
+  @include mobile-only {
+    height: 374px;
+  }
+}
+
+.members-containerHovered {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 290px;
+  height: 450px;
+  gap: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  transform: scale(1.1);
+  transition: transform 0.4s;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 10px;
+}
+.imageMembers {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border: solid white;
+  margin-top: 10px;
+}
+.nameMembers {
+  font-family: $font-title;
+  padding-top: 30px;
+  font-weight: 30px;
+  text-align: center;
+}
+.descriptionMembers {
+  font-family: $font-content;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 16px;
+  margin: 2px;
+  font-size: 12px;
+}
+.linkedinMembers {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}

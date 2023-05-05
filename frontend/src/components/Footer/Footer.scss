@@ -1,0 +1,38 @@
+$breakpoints: (
+  mobile: 600px,
+);
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  background-color: #221e40;
+  align-items: center;
+  justify-content: space-between;
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.footer2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0% 0% 0% 2%;
+}
+
+.footer3 {
+  list-style: none;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.copyright {
+  margin: 0% 2% 0% 0%;
+}
